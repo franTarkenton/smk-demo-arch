@@ -1,0 +1,722 @@
+{
+    "name": "smk-demo-arch",
+    "viewer": {
+        "type": "leaflet",
+        "location": {
+            "center": [
+                -123.45186213991371,
+                50.16603971594504
+            ],
+            "extent": [
+                -125.57222346803871,
+                47.86445613797225,
+                -121.33150081178871,
+                52.36189392442682
+            ],
+            "zoom": 7
+        },
+        "esriApiKey": "",
+        "baseMap": "StamenTonerLight"
+    },
+    "layers": [
+        {
+            "type": "esri-dynamic",
+            "id": 374,
+            "title": "Indian Reserves - Outlined",
+            "isVisible": true,
+            "isQueryable": true,
+            "opacity": 0.65,
+            "minScale": 2000000,
+            "maxScale": 0,
+            "titleAttribute": null,
+            "attributes": [
+                {
+                    "name": "CLAB_ID",
+                    "title": "CLAB ID",
+                    "visible": true
+                },
+                {
+                    "name": "ABSOLUTE_ACCURACY",
+                    "title": "Absolute Accuracy",
+                    "visible": true
+                },
+                {
+                    "name": "ENGLISH_NAME",
+                    "title": "English Name",
+                    "visible": true
+                },
+                {
+                    "name": "FRENCH_NAME",
+                    "title": "French Name",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_CODE",
+                    "title": "Feature Code",
+                    "visible": false
+                },
+                {
+                    "name": "OBJECTID",
+                    "title": "OBJECTID",
+                    "visible": true
+                },
+                {
+                    "name": "GEOMETRY",
+                    "title": "GEOMETRY",
+                    "visible": true
+                },
+                {
+                    "name": "GEOMETRY.AREA",
+                    "title": "GEOMETRY.AREA",
+                    "visible": false
+                },
+                {
+                    "name": "GEOMETRY.LEN",
+                    "title": "GEOMETRY.LEN",
+                    "visible": false
+                },
+                {
+                    "name": "SE_ANNO_CAD_DATA",
+                    "title": "SE_ANNO_CAD_DATA",
+                    "visible": false
+                },
+                {
+                    "name": "FEATURE_AREA_SQM",
+                    "title": "Feature Area SQM",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_LENGTH_M",
+                    "title": "FEATURE_LENGTH_M",
+                    "visible": false
+                }
+            ],
+            "queries": null,
+            "mpcmId": "374",
+            "mpcmWorkspace": "MPCM_ALL_PUB",
+            "serviceUrl": "https://maps.gov.bc.ca/arcgis/rest/services/mpcm/bcgw/MapServer",
+            "dynamicLayers": [
+                "{\"id\":374,\"minScale\":2000000,\"maxScale\":0,\"source\":{\"type\":\"dataLayer\",\"dataSource\":{\"type\":\"table\",\"workspaceId\":\"MPCM_ALL_PUB\",\"dataSourceName\":\"WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES\",\"gdbVersion\":\"\"}},\"drawingInfo\":{\"renderer\":{\"type\":\"simple\",\"symbol\":{\"type\":\"esriSFS\",\"style\":\"esriSFSSolid\",\"color\":[0,0,0,0],\"outline\":{\"type\":\"esriSLS\",\"style\":\"esriSLSSolid\",\"color\":[137,90,68,255],\"width\":1}},\"label\":\"Indian Reserves\",\"description\":\"\"},\"transparency\":0,\"labelingInfo\":[{\"labelPlacement\":\"esriServerPolygonPlacementAlwaysHorizontal\",\"where\":null,\"labelExpression\":\"[ENGLISH_NAME]\",\"useCodedValues\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"backgroundColor\":null,\"borderLineColor\":null,\"borderLineSize\":null,\"verticalAlignment\":\"baseline\",\"horizontalAlignment\":\"left\",\"rightToLeft\":false,\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"kerning\":false,\"haloColor\":[215,176,158,255],\"haloSize\":1,\"font\":{\"family\":\"Arial\",\"size\":8,\"style\":\"normal\",\"weight\":\"bold\",\"decoration\":\"none\"}},\"minScale\":500000,\"maxScale\":0}]}}"
+            ],
+            "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/8efe9193-80d2-4fdf-a18c-d531a94196ad"
+        },
+        {
+            "type": "esri-dynamic",
+            "id": 375,
+            "title": "Indian Reserves - Colour Filled",
+            "isVisible": true,
+            "isQueryable": true,
+            "opacity": 0.65,
+            "minScale": 2000000,
+            "maxScale": 0,
+            "titleAttribute": null,
+            "attributes": [
+                {
+                    "name": "CLAB_ID",
+                    "title": "CLAB ID",
+                    "visible": true
+                },
+                {
+                    "name": "ABSOLUTE_ACCURACY",
+                    "title": "Absolute Accuracy",
+                    "visible": true
+                },
+                {
+                    "name": "ENGLISH_NAME",
+                    "title": "English Name",
+                    "visible": true
+                },
+                {
+                    "name": "FRENCH_NAME",
+                    "title": "French Name",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_CODE",
+                    "title": "Feature Code",
+                    "visible": false
+                },
+                {
+                    "name": "OBJECTID",
+                    "title": "OBJECTID",
+                    "visible": true
+                },
+                {
+                    "name": "GEOMETRY",
+                    "title": "GEOMETRY",
+                    "visible": true
+                },
+                {
+                    "name": "GEOMETRY.AREA",
+                    "title": "GEOMETRY.AREA",
+                    "visible": false
+                },
+                {
+                    "name": "GEOMETRY.LEN",
+                    "title": "GEOMETRY.LEN",
+                    "visible": false
+                },
+                {
+                    "name": "SE_ANNO_CAD_DATA",
+                    "title": "SE_ANNO_CAD_DATA",
+                    "visible": false
+                },
+                {
+                    "name": "FEATURE_AREA_SQM",
+                    "title": "Feature Area SQM",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_LENGTH_M",
+                    "title": "FEATURE_LENGTH_M",
+                    "visible": false
+                }
+            ],
+            "queries": null,
+            "mpcmId": "375",
+            "mpcmWorkspace": "MPCM_ALL_PUB",
+            "serviceUrl": "https://maps.gov.bc.ca/arcgis/rest/services/mpcm/bcgw/MapServer",
+            "dynamicLayers": [
+                "{\"id\":375,\"minScale\":2000000,\"maxScale\":0,\"source\":{\"type\":\"dataLayer\",\"dataSource\":{\"type\":\"table\",\"workspaceId\":\"MPCM_ALL_PUB\",\"dataSourceName\":\"WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES\",\"gdbVersion\":\"\"}},\"drawingInfo\":{\"renderer\":{\"type\":\"simple\",\"symbol\":{\"type\":\"esriSFS\",\"style\":\"esriSFSSolid\",\"color\":[215,176,158,255],\"outline\":{\"type\":\"esriSLS\",\"style\":\"esriSLSSolid\",\"color\":[130,130,130,255],\"width\":0.4}},\"label\":\"Indian Reserves\",\"description\":\"\"},\"transparency\":20,\"labelingInfo\":null}}"
+            ],
+            "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/8efe9193-80d2-4fdf-a18c-d531a94196ad"
+        },
+        {
+            "type": "esri-dynamic",
+            "id": 414,
+            "title": "Natural Resource Areas - Outlined",
+            "isVisible": true,
+            "isQueryable": true,
+            "opacity": 0.65,
+            "minScale": 35000000,
+            "maxScale": 0,
+            "titleAttribute": null,
+            "attributes": [
+                {
+                    "name": "AREA_NUMBER",
+                    "title": "Area Number",
+                    "visible": true
+                },
+                {
+                    "name": "AREA_NAME",
+                    "title": "Area Name",
+                    "visible": true
+                },
+                {
+                    "name": "ORG_UNIT",
+                    "title": "Org Unit",
+                    "visible": true
+                },
+                {
+                    "name": "ORG_UNIT_NAME",
+                    "title": "Org Unit Name",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_CODE",
+                    "title": "Feature Code",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_NAME",
+                    "title": "Feature Name",
+                    "visible": false
+                },
+                {
+                    "name": "SHAPE",
+                    "title": "SHAPE",
+                    "visible": true
+                },
+                {
+                    "name": "OBJECTID",
+                    "title": "OBJECTID",
+                    "visible": true
+                },
+                {
+                    "name": "SE_ANNO_CAD_DATA",
+                    "title": "SE_ANNO_CAD_DATA",
+                    "visible": false
+                },
+                {
+                    "name": "SHAPE.AREA",
+                    "title": "SHAPE.AREA",
+                    "visible": false
+                },
+                {
+                    "name": "SHAPE.LEN",
+                    "title": "SHAPE.LEN",
+                    "visible": false
+                },
+                {
+                    "name": "FEATURE_AREA_SQM",
+                    "title": "Feature Area SQM",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_LENGTH_M",
+                    "title": "Feature Length M",
+                    "visible": true
+                }
+            ],
+            "queries": null,
+            "mpcmId": "414",
+            "mpcmWorkspace": "MPCM_ALL_PUB",
+            "serviceUrl": "https://maps.gov.bc.ca/arcgis/rest/services/mpcm/bcgw/MapServer",
+            "dynamicLayers": [
+                "{\"id\":414,\"minScale\":35000000,\"maxScale\":0,\"source\":{\"type\":\"dataLayer\",\"dataSource\":{\"type\":\"table\",\"workspaceId\":\"MPCM_ALL_PUB\",\"dataSourceName\":\"WHSE_ADMIN_BOUNDARIES.ADM_NR_AREAS_SPG\",\"gdbVersion\":\"\"}},\"drawingInfo\":{\"renderer\":{\"type\":\"simple\",\"symbol\":{\"type\":\"esriSFS\",\"style\":\"esriSFSSolid\",\"color\":[0,0,0,0],\"outline\":{\"type\":\"esriSLS\",\"style\":\"esriSLSSolid\",\"color\":[255,170,0,255],\"width\":8}},\"label\":\"\",\"description\":\"\"},\"transparency\":0,\"labelingInfo\":[{\"labelPlacement\":\"esriServerPolygonPlacementAlwaysHorizontal\",\"where\":null,\"labelExpression\":\"[AREA_NAME]\",\"useCodedValues\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"backgroundColor\":null,\"borderLineColor\":null,\"borderLineSize\":null,\"verticalAlignment\":\"bottom\",\"horizontalAlignment\":\"left\",\"rightToLeft\":false,\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"kerning\":true,\"haloColor\":[255,211,127,255],\"haloSize\":1,\"font\":{\"family\":\"Arial\",\"size\":12,\"style\":\"normal\",\"weight\":\"normal\",\"decoration\":\"none\"}},\"minScale\":0,\"maxScale\":0}]}}"
+            ],
+            "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/c1861ba4-abb8-4947-b3e5-7f7c4d7257d5"
+        },
+        {
+            "type": "esri-dynamic",
+            "id": 4706,
+            "title": "Natural Resource Areas - Colour Themed",
+            "isVisible": true,
+            "isQueryable": true,
+            "opacity": 0.65,
+            "minScale": 35000000,
+            "maxScale": 0,
+            "titleAttribute": null,
+            "attributes": [
+                {
+                    "name": "AREA_NUMBER",
+                    "title": "Area Number",
+                    "visible": true
+                },
+                {
+                    "name": "AREA_NAME",
+                    "title": "Area Name",
+                    "visible": true
+                },
+                {
+                    "name": "ORG_UNIT",
+                    "title": "Org Unit",
+                    "visible": true
+                },
+                {
+                    "name": "ORG_UNIT_NAME",
+                    "title": "Org Unit Name",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_CODE",
+                    "title": "Feature Code",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_NAME",
+                    "title": "Feature Name",
+                    "visible": false
+                },
+                {
+                    "name": "SHAPE",
+                    "title": "SHAPE",
+                    "visible": true
+                },
+                {
+                    "name": "OBJECTID",
+                    "title": "OBJECTID",
+                    "visible": true
+                },
+                {
+                    "name": "SE_ANNO_CAD_DATA",
+                    "title": "SE_ANNO_CAD_DATA",
+                    "visible": false
+                },
+                {
+                    "name": "SHAPE.AREA",
+                    "title": "SHAPE.AREA",
+                    "visible": false
+                },
+                {
+                    "name": "SHAPE.LEN",
+                    "title": "SHAPE.LEN",
+                    "visible": false
+                },
+                {
+                    "name": "FEATURE_AREA_SQM",
+                    "title": "Feature Area SQM",
+                    "visible": true
+                },
+                {
+                    "name": "FEATURE_LENGTH_M",
+                    "title": "Feature Length M",
+                    "visible": true
+                }
+            ],
+            "queries": null,
+            "mpcmId": "4706",
+            "mpcmWorkspace": "MPCM_ALL_PUB",
+            "serviceUrl": "https://maps.gov.bc.ca/arcgis/rest/services/mpcm/bcgw/MapServer",
+            "dynamicLayers": [
+                "{\"id\":4706,\"minScale\":35000000,\"maxScale\":0,\"source\":{\"type\":\"dataLayer\",\"dataSource\":{\"type\":\"table\",\"workspaceId\":\"MPCM_ALL_PUB\",\"dataSourceName\":\"WHSE_ADMIN_BOUNDARIES.ADM_NR_AREAS_SPG\",\"gdbVersion\":\"\"}},\"drawingInfo\":{\"renderer\":{\"type\":\"uniqueValue\",\"field1\":\"AREA_NAME\",\"field2\":null,\"field3\":null,\"defaultSymbol\":null,\"defaultLabel\":null,\"uniqueValueInfos\":[{\"symbol\":{\"type\":\"esriSFS\",\"style\":\"esriSFSSolid\",\"color\":[182,252,191,255],\"outline\":{\"type\":\"esriSLS\",\"style\":\"esriSLSSolid\",\"color\":[110,110,110,255],\"width\":0.4}},\"value\":\"Coast Natural Resource Area\",\"label\":\"Coast Natural Resource Area\",\"description\":\"\"},{\"symbol\":{\"type\":\"esriSFS\",\"style\":\"esriSFSSolid\",\"color\":[252,202,206,255],\"outline\":{\"type\":\"esriSLS\",\"style\":\"esriSLSSolid\",\"color\":[110,110,110,255],\"width\":0.4}},\"value\":\"North Natural Resource Area\",\"label\":\"North Natural Resource Area\",\"description\":\"\"},{\"symbol\":{\"type\":\"esriSFS\",\"style\":\"esriSFSSolid\",\"color\":[179,187,252,255],\"outline\":{\"type\":\"esriSLS\",\"style\":\"esriSLSSolid\",\"color\":[110,110,110,255],\"width\":0.4}},\"value\":\"South Natural Resource Area\",\"label\":\"South Natural Resource Area\",\"description\":\"\"}],\"fieldDelimiter\":\",\"},\"transparency\":20,\"labelingInfo\":null}}"
+            ],
+            "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/c1861ba4-abb8-4947-b3e5-7f7c4d7257d5"
+        },
+        {
+            "type": "wms",
+            "id": "dbc-dbc-rim-rest-area-v--dbc-rim-rest-area-v",
+            "title": "Rest Area ( DBC_RIM_REST_AREA_V )",
+            "isVisible": true,
+            "isQueryable": true,
+            "opacity": 0.65,
+            "minScale": null,
+            "maxScale": null,
+            "titleAttribute": null,
+            "attributes": [
+                {
+                    "id": "chris-rest-area-id",
+                    "name": "CHRIS_REST_AREA_ID",
+                    "title": "CHRIS REST AREA ID",
+                    "visible": true
+                },
+                {
+                    "id": "admin-unit-code",
+                    "name": "ADMIN_UNIT_CODE",
+                    "title": "ADMIN UNIT CODE",
+                    "visible": true
+                },
+                {
+                    "id": "admin-unit-name",
+                    "name": "ADMIN_UNIT_NAME",
+                    "title": "ADMIN UNIT NAME",
+                    "visible": true
+                },
+                {
+                    "id": "cross-section-position",
+                    "name": "CROSS_SECTION_POSITION",
+                    "title": "CROSS SECTION POSITION",
+                    "visible": true
+                },
+                {
+                    "id": "rest-area-name",
+                    "name": "REST_AREA_NAME",
+                    "title": "REST AREA NAME",
+                    "visible": true
+                },
+                {
+                    "id": "rest-area-number",
+                    "name": "REST_AREA_NUMBER",
+                    "title": "REST AREA NUMBER",
+                    "visible": true
+                },
+                {
+                    "id": "rest-area-class",
+                    "name": "REST_AREA_CLASS",
+                    "title": "REST AREA CLASS",
+                    "visible": true
+                },
+                {
+                    "id": "associated-numbered-route",
+                    "name": "ASSOCIATED_NUMBERED_ROUTE",
+                    "title": "ASSOCIATED NUMBERED ROUTE",
+                    "visible": true
+                },
+                {
+                    "id": "distance-from-municipality",
+                    "name": "DISTANCE_FROM_MUNICIPALITY",
+                    "title": "DISTANCE FROM MUNICIPALITY",
+                    "visible": true
+                },
+                {
+                    "id": "number-of-toilets",
+                    "name": "NUMBER_OF_TOILETS",
+                    "title": "NUMBER OF TOILETS",
+                    "visible": true
+                },
+                {
+                    "id": "toilet-type",
+                    "name": "TOILET_TYPE",
+                    "title": "TOILET TYPE",
+                    "visible": true
+                },
+                {
+                    "id": "wheelchair-access-toilet",
+                    "name": "WHEELCHAIR_ACCESS_TOILET",
+                    "title": "WHEELCHAIR ACCESS TOILET",
+                    "visible": true
+                },
+                {
+                    "id": "ev-station-level-2-j1772",
+                    "name": "EV_STATION_LEVEL_2_J1772",
+                    "title": "EV STATION LEVEL 2 J1772",
+                    "visible": true
+                },
+                {
+                    "id": "ev-station-25-kw-dcfc",
+                    "name": "EV_STATION_25_KW_DCFC",
+                    "title": "EV STATION 25 KW DCFC",
+                    "visible": true
+                },
+                {
+                    "id": "ev-station-50-kw-dcfc",
+                    "name": "EV_STATION_50_KW_DCFC",
+                    "title": "EV STATION 50 KW DCFC",
+                    "visible": true
+                },
+                {
+                    "id": "wi-fi",
+                    "name": "WI_FI",
+                    "title": "WI FI",
+                    "visible": true
+                },
+                {
+                    "id": "number-of-tables",
+                    "name": "NUMBER_OF_TABLES",
+                    "title": "NUMBER OF TABLES",
+                    "visible": true
+                },
+                {
+                    "id": "number-of-standard-barrels",
+                    "name": "NUMBER_OF_STANDARD_BARRELS",
+                    "title": "NUMBER OF STANDARD BARRELS",
+                    "visible": true
+                },
+                {
+                    "id": "number-of-bear-proof-barrels",
+                    "name": "NUMBER_OF_BEAR_PROOF_BARRELS",
+                    "title": "NUMBER OF BEAR PROOF BARRELS",
+                    "visible": true
+                },
+                {
+                    "id": "power-type",
+                    "name": "POWER_TYPE",
+                    "title": "POWER TYPE",
+                    "visible": true
+                },
+                {
+                    "id": "power-responsibility",
+                    "name": "POWER_RESPONSIBILITY",
+                    "title": "POWER RESPONSIBILITY",
+                    "visible": true
+                },
+                {
+                    "id": "direction-of-traffic",
+                    "name": "DIRECTION_OF_TRAFFIC",
+                    "title": "DIRECTION OF TRAFFIC",
+                    "visible": true
+                },
+                {
+                    "id": "access-restriction",
+                    "name": "ACCESS_RESTRICTION",
+                    "title": "ACCESS RESTRICTION",
+                    "visible": true
+                },
+                {
+                    "id": "deceleration-lane",
+                    "name": "DECELERATION_LANE",
+                    "title": "DECELERATION LANE",
+                    "visible": true
+                },
+                {
+                    "id": "acceleration-lane",
+                    "name": "ACCELERATION_LANE",
+                    "title": "ACCELERATION LANE",
+                    "visible": true
+                },
+                {
+                    "id": "direct-access",
+                    "name": "DIRECT_ACCESS",
+                    "title": "DIRECT ACCESS",
+                    "visible": true
+                },
+                {
+                    "id": "accom-commercial-trucks",
+                    "name": "ACCOM_COMMERCIAL_TRUCKS",
+                    "title": "ACCOM COMMERCIAL TRUCKS",
+                    "visible": true
+                },
+                {
+                    "id": "open-year-round",
+                    "name": "OPEN_YEAR_ROUND",
+                    "title": "OPEN YEAR ROUND",
+                    "visible": true
+                },
+                {
+                    "id": "open-date",
+                    "name": "OPEN_DATE",
+                    "title": "OPEN DATE",
+                    "visible": true
+                },
+                {
+                    "id": "close-date",
+                    "name": "CLOSE_DATE",
+                    "title": "CLOSE DATE",
+                    "visible": true
+                },
+                {
+                    "id": "chris-anchor-section-id",
+                    "name": "CHRIS_ANCHOR_SECTION_ID",
+                    "title": "CHRIS ANCHOR SECTION ID",
+                    "visible": true
+                },
+                {
+                    "id": "event-location",
+                    "name": "EVENT_LOCATION",
+                    "title": "EVENT LOCATION",
+                    "visible": true
+                },
+                {
+                    "id": "highway-number",
+                    "name": "HIGHWAY_NUMBER",
+                    "title": "HIGHWAY NUMBER",
+                    "visible": true
+                },
+                {
+                    "id": "objectid",
+                    "name": "OBJECTID",
+                    "title": "OBJECTID",
+                    "visible": true
+                },
+                {
+                    "id": "geometry",
+                    "name": "GEOMETRY",
+                    "title": "GEOMETRY",
+                    "visible": true
+                }
+            ],
+            "queries": null,
+            "serviceUrl": "https://maps.th.gov.bc.ca/geoV05/ows",
+            "layerName": "dbc:DBC_RIM_REST_AREA_V",
+            "styleName": "DBC_RIM_REST_AREA_V"
+        }
+    ],
+    "tools": [
+        {
+            "type": "toolbar",
+            "enabled": true
+        },
+        {
+            "type": "list-menu",
+            "enabled": true,
+            "title": "The greatest app ever"
+        },
+        {
+            "type": "pan",
+            "enabled": true
+        },
+        {
+            "type": "zoom",
+            "enabled": true
+        },
+        {
+            "order": 1,
+            "position": "list-menu",
+            "icon": "help",
+            "title": "About The greatest app ever",
+            "content": "<p>Welcome to SMK!</p><p>demo of smk</p>",
+            "type": "about",
+            "enabled": false
+        },
+        {
+            "order": 3,
+            "position": [
+                "shortcut-menu",
+                "list-menu"
+            ],
+            "icon": "layers",
+            "title": "Layers",
+            "command": {
+                "allVisibility": true,
+                "filter": true,
+                "legend": true
+            },
+            "glyph": {
+                "visible": "visibility",
+                "hidden": "visibility_off"
+            },
+            "type": "layers",
+            "enabled": true,
+            "display": [
+                {
+                    "id": 414
+                },
+                {
+                    "id": 4706
+                },
+                {
+                    "id": 375
+                },
+                {
+                    "id": 374
+                },
+                {
+                    "id": "dbc-dbc-rim-rest-area-v--dbc-rim-rest-area-v"
+                }
+            ]
+        },
+        {
+            "type": "baseMaps",
+            "enabled": false
+        },
+        {
+            "type": "identify",
+            "enabled": true,
+            "showPanel": true,
+            "showWidget": true,
+            "style": {
+                "strokeWidth": 1,
+                "strokeStyle": "1, 1",
+                "strokeColor": "#000000",
+                "strokeOpacity": 0.8,
+                "fillColor": "#000000",
+                "fillOpacity": 0.5,
+                "markerSize": [
+                    20,
+                    20
+                ],
+                "markerOffset": [
+                    10,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "search",
+            "enabled": true
+        },
+        {
+            "type": "coordinate",
+            "enabled": true
+        },
+        {
+            "type": "measure",
+            "enabled": false
+        },
+        {
+            "type": "markup",
+            "enabled": false
+        },
+        {
+            "type": "scale",
+            "enabled": true
+        },
+        {
+            "type": "minimap",
+            "enabled": true
+        },
+        {
+            "type": "directions",
+            "enabled": false
+        },
+        {
+            "type": "location",
+            "enabled": false
+        },
+        {
+            "type": "select",
+            "enabled": false
+        },
+        {
+            "type": "geomark",
+            "geomarkService": {
+                "url": "https://apps.gov.bc.ca/pub/geomark"
+            },
+            "position": "list-menu",
+            "enabled": false
+        }
+    ],
+    "version": "1.1.12",
+    "createdBy": "Guy Lafleur",
+    "createdDate": "2023-09-14T16:09:30.473Z"
+}

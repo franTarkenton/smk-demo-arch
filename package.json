@@ -1,0 +1,13 @@
+{
+    "name": "smk-demo-arch",
+    "version": "0.0.1",
+    "description": "demo of smk",
+    "author": "Guy Lafleur",
+    "dependencies": {
+        "@bcgov/smk": "1.1.12",
+        "http-server": "^0.12.3"
+    },
+    "scripts": {
+        "view": "http-server -o -c-1"
+    }
+}
