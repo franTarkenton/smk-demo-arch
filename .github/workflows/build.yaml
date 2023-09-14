@@ -1,0 +1,73 @@
+name: smk-composite-action-tests
+
+# used on push for testing / development
+# on:
+#   push:
+
+on:
+  pull_request:
+    # debug: remove the dev,putting build action on non existent branches for debug
+    branches: ['master', 'main']
+    types: ['opened', 'reopened']
+    paths-ignore:
+      - openshift/**
+      - .vscode/**
+      - docs/**
+      - .gitignore
+      - LICENSE
+      - open-api.json
+      - readme.md
+      - helm-charts
+      - code_of_conduct.md
+      
+jobs:
+  # This workflow contains a single job called "build"
+  buildjob:
+    defaults:
+      run:
+        shell: bash
+
+    name: 'Build SMK container image'
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+    env:
+      OPENSHIFT_SERVER_URL: ${{secrets.OPENSHIFT_SERVER_URL}}
+      OPENSHIFT_TOKEN_DEV: ${{secrets.OPENSHIFT_TOKEN_DEV}}
+      OPENSHIFT_TOKEN_PROD: ${{secrets.OPENSHIFT_TOKEN_PROD}}
+      GHCR_USER: ${{ secrets.GHCR_USER }}
+      GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+      DEBUG_DEPLOY: false
+      
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+      if: env.OPENSHIFT_SERVER_URL != '' &&  env.OPENSHIFT_TOKEN_DEV != '' && env.GHCR_USER != '' && env.GHCR_TOKEN != ''
+      id: checkout
+      with:
+        fetch-depth: 0
+
+    - name: Building image
+      uses: franTarkenton/smk-actions/smk-build@main
+      id: buildSMKImage
+      if: env.OPENSHIFT_SERVER_URL != '' &&  env.OPENSHIFT_TOKEN_DEV != '' && env.GHCR_USER != '' && env.GHCR_TOKEN != ''
+      with:
+        OPENSHIFT_SERVER_URL: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        OPENSHIFT_TOKEN_DEV: ${{ secrets.OPENSHIFT_TOKEN_DEV }}
+        GHCR_USER: ${{ secrets.GHCR_USER }}
+        GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+        DOCKER_REGISTRY: 'ghcr.io'
+
+    - name: deploying dev
+      uses: franTarkenton/smk-actions/smk-deploy@main
+      id: deploySMKContainer
+      if: env.OPENSHIFT_SERVER_URL != '' &&  env.OPENSHIFT_TOKEN_DEV != '' && env.GHCR_USER != '' && env.GHCR_TOKEN != ''
+      with:
+        OPENSHIFT_SERVER_URL: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        OPENSHIFT_TOKEN_DEV: ${{ secrets.OPENSHIFT_TOKEN_DEV }}
+        GHCR_USER: ${{ secrets.GHCR_USER }}
+        GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+        DOCKER_REGISTRY: 'ghcr.io'
+        PR_REVIEWERS: '["franTarkenton"]'
+        PR_MENTIONS: '["franTarkenton"]'
+
+
