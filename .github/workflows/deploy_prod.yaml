@@ -1,0 +1,57 @@
+# This action should:
+#  - trigger on merge of pr
+#  - tag the master with the image tag
+#  - deploy to prod
+#
+# https://github.community/t/run-action-only-when-a-pr-is-merged/18268
+
+name: deploy prod
+on:
+  pull_request:
+    branches:  ['master', 'main']
+    types: 
+      - closed
+      
+# debugging
+# -------------
+# on: 
+#   push:
+#     branches: ['dev', 'smk-cdci']
+
+jobs:
+  deployprod:
+
+    # Commented out for testing
+    if: github.event.pull_request.merged == true
+    defaults:
+      run:
+        shell: bash
+    runs-on: ubuntu-20.04
+    env:
+      OPENSHIFT_SERVER_URL: ${{secrets.OPENSHIFT_SERVER_URL}}
+      OPENSHIFT_TOKEN_DEV: ${{secrets.OPENSHIFT_TOKEN_DEV}}
+      OPENSHIFT_TOKEN_PROD: ${{secrets.OPENSHIFT_TOKEN_PROD}}
+      GHCR_USER: ${{ secrets.GHCR_USER }}
+      GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+
+    steps:
+    # CHECKOUT THE CODE
+    - uses: actions/checkout@v2
+      id: checkout
+      if: env.OPENSHIFT_SERVER_URL != '' &&  env.OPENSHIFT_TOKEN_DEV != '' && env.GHCR_USER != '' && env.GHCR_TOKEN != ''
+      with:
+        fetch-depth: 0
+
+    - name: deploying prod
+      uses: bcgov/smk-actions/smk-deploy@main
+      id: deploySMKContainer
+      if: env.OPENSHIFT_SERVER_URL != '' &&  env.OPENSHIFT_TOKEN_DEV != '' && env.GHCR_USER != '' && env.GHCR_TOKEN != ''
+      with:
+        OPENSHIFT_SERVER_URL: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        OPENSHIFT_TOKEN_DEV: ${{ secrets.OPENSHIFT_TOKEN_DEV }}
+        OPENSHIFT_TOKEN_PROD: ${{ secrets.OPENSHIFT_TOKEN_PROD }}
+        GHCR_USER: ${{ secrets.GHCR_USER }}
+        GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+        DOCKER_REGISTRY: 'docker.pkg.github.com'
+        PR_REVIEWERS: '["franTarkenton"]'
+        PR_MENTIONS: '["franTarkenton"]'
